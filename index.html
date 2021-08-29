@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>PEPERO BOOK STORE</title>
+
+    <!--og정보 삽입란-->
+    <meta property="og:title" content="빼빼로 책방"/>
+    <meta property="og:description" content="스파르타코딩클럽 11조 첫작품"/>
+    <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpg') }}"/>
+
+    <link rel="shortcut icon" href="image/favicon.ico">   
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="js/common.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->    
+  </head>
+
+<body>    
+    <div class="top_wrap img-fluid">
+        <!-- 타이틀-->    
+        <a href="#"><img class="title_name" src='image/title_name.png'></a>
+         <!-- 검색바 -->
+        <div class="row">
+            <div class="search">
+                <!--다른 소스사용해서 변경한내용입니다-->
+                <div class="input-group col-12 justify-content-center">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">카테고리
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">전체</a>
+                            <a class="dropdown-item" href="#">작가별</a>
+                            <a class="dropdown-item" href="#">국가별</a>
+                            <a class="dropdown-item" href="#">베스트셀러</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="2글자 이상 입력하세요">
+                    <button class="searchBtn"></button>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+<div class="container">
+    <!--베스트셀러 슬라이드(구역만 잡은 상태) -->
+            <!-- Slider main container -->
+    <div class="bestseller mt-5 mb-5">
+        <p class="h3 best">8월의 베스트셀러</p>
+    </div>
+</div>
+
+<div class="container">
+        <div class="wrap">
+            <div class="swiper col-10 mb-3">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="row">
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid books mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4 title">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid books mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid books mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid books mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                    <div class="booksText">
+                                        <p class="mb-3 h4">총, 균, 쇠</p>
+                                        <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                    </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                    <div class="booksText">
+                                        <p class="mb-3 h4">총, 균, 쇠</p>
+                                        <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                    </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                    <div class="booksText">
+                                        <p class="mb-3 h4">총, 균, 쇠</p>
+                                        <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                    </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                    <div class="booksText">
+                                        <p class="mb-3 h4">총, 균, 쇠</p>
+                                        <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-12 d-inline-block">
+                                    <img src="http://image.yes24.com/goods/1940233/XL" alt="" class="img-fluid mb-3">
+                                        <div class="booksText">
+                                            <p class="mb-3 h4">총, 균, 쇠</p>
+                                            <p class="mb-3">왜 어떤 민족들은 다른 민족들의 정복과 지배의 대상으로 전락하고 말았는가. 왜 원주민들은 유라시아인들에 의해 도태되고 말았는가.</p>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                <!-- If we need navigation buttons -->
+            </div>
+            <div class="swiper-button-prev d-none d-sm-block"></div>
+            <div class="swiper-button-next d-none d-sm-block"></div>  
+        </div>  
+</div>
+<div class="container">
+        <!--포스팅박스 -->
+    <div class="post_box row">
+            <div class="it_reimg col-xl-3 col-6 order-1 d-flex flex-column justify-content-center">
+                <img src="image/it_review.png" class="ml-auto mr-auto d-block mt-3 mb-3">
+                <p class="it_reimgdown text-center align-self-center"> 여러분이 느낀 감상과 별점을 등록해 주세요.</p>
+            </div>
+        
+            <div class="post_inputbox order-2 col-xl-6 col-12 order-3 order-xl-2 mt-3">
+         <!-- 포스팅박스 별점찍기 (별모양만 넣은 상태) -->
+                <div class="startRadio">
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 1개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 1.5개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 2개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 2.5개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 3개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 3.5개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 4개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 4.5개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 5개</span></span>
+                    </label>
+                    <label class="startRadio__box">
+                    <input type="radio" name="star" id="">
+                    <span class="startRadio__img"><span class="blind">별 5.5개</span></span>
+                    </label>
+                </div>            
+        
+                <form class="post_in ">
+                        <label for="exampleInputposting"></label>
+                        <input type="text" class="form-control post mb-3" id="exampleInputposting"
+                               placeholder="글자를 입력해주세요">
+                    <div class="reinfo row">
+                        <div class="input-group mb-3 col-md-6 col-sm-12" id="renick">
+                            <div class="input-group-prepend" id="renick_name">
+                                <span class="input-group-text">닉네임</span>
+                            </div>
+                            <input type="text" class="form-control post" placeholder="닉네임 또는 이름을 입력하세요" aria-label="Username"
+                                   aria-describedby="renick_name" style="font-size: 9px">
+                        </div>
+                        <div class="input-group mb-3 col-md-6 col-sm-12" id="rebookurl">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="rebook_url">책링크</span>
+                            </div>
+                            <input type="text" class="form-control post" placeholder="주소 링크를 붙여 넣어주세요" aria-label="Username"
+                                   aria-describedby="rebook_url" style="font-size: 9px;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        <div class="button align-self-center justify-content-end col-xl-3 col-6 order-2 order-xl-3">
+            <button type="submit" class="btn" id="post_btn"></button>
+        </div>
+    </div>
+    <!--리뷰 목록 시작 -->
+
+        <div class="row" id="cards-box">  
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="#">
+                <div class="card mb-3 px-5 py-5">
+                    <img src="image/star_grp.png" alt="grp" class="mb-3">
+                    <img class="card-img-top"
+                         src="https://www.bookprice.co.kr/img_thumb/9791197233401.jpg"
+                         alt="Card image">                    
+                    <div class="card-body">
+                        <h2 class="card-title">책 제목</h2>
+                        <p class="card-text">책 내용이 여기에 들어갑니다!</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                    <p class="writer mb-0">글쓴이이름</p>
+                </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="#">
+                <div class="card mb-3 px-5 py-5">
+                    <img src="image/star_grp.png" alt="grp" class="mb-3">
+                    <img class="card-img-top"
+                         src="https://www.bookprice.co.kr/img_thumb/9791197233401.jpg"
+                         alt="Card image">                    
+                    <div class="card-body">
+                        <h2 class="card-title">책 제목</h2>
+                        <p class="card-text">책 내용이 여기에 들어갑니다!</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                    <p class="writer mb-0">글쓴이이름</p>
+                </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="#">
+                <div class="card mb-3 px-5 py-5">
+                    <img src="image/star_grp.png" alt="grp" class="mb-3">
+                    <img class="card-img-top"
+                         src="https://www.bookprice.co.kr/img_thumb/9791197233401.jpg"
+                         alt="Card image">                    
+                    <div class="card-body">
+                        <h2 class="card-title">책 제목</h2>
+                        <p class="card-text">책 내용이 여기에 들어갑니다!</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                    <p class="writer mb-0">글쓴이이름</p>
+                </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="#">
+                <div class="card mb-3 px-5 py-5">
+                    <img src="image/star_grp.png" alt="grp" class="mb-3">
+                    <img class="card-img-top"
+                         src="https://www.bookprice.co.kr/img_thumb/9791197233401.jpg"
+                         alt="Card image">                    
+                    <div class="card-body">
+                        <h2 class="card-title">책 제목</h2>
+                        <p class="card-text">책 내용이 여기에 들어갑니다!</p>
+                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+                    </div>
+                    <p class="writer mb-0">글쓴이이름</p>
+                </div>
+                </a>
+            </div>
+            
+        
+            <nav aria-label="Page navigation example" id="postnum">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+</div> 
+<div class="container">
+        <div class="footer footerline py-3 ">                   
+            <div class="row">
+                <div class="col-12 col-md-4 col-xl-4 mb-3 mb-md-0 d-md-flex col-md-4 mt-3 align-self-center justify-content-center">
+                    <a href="#"><img src="image/down_logo.png" class="m-auto d-block logo "></a>
+                </div>
+            <div class="footerText d-md-flex col-md-8 row no-gutters col-xl-8">
+                                <div class="info_one col-6 col-md-6 col-xl-6 text-center align-self-center mt-3">
+                                      <p>  Disign.EB | HTML.NH<br>
+                                        API.DH | CSS.WB <br>
+                                        ⓒ Team PEPEROJO
+                                      </p>
+                                </div>
+                                <div class="info_two col-6 col-md-6 col-xl-6 text-center mt-3">
+                                   <p> 이 홈페이지는 책추천 및 리뷰를 코딩공부에 사용하는 사이트로 상업적 이용목적이 없는 사이트입니다.<br>
+                                        This website is a site that uses book recommendations and reviews to study coding, and is
+                                        not intended for commercial use.</p>
+                                </div>
+            </div>
+            </div>
+        </div>
+</div>
+
+  </body>
+  
+</html>
